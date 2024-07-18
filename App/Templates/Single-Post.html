@@ -1,0 +1,28 @@
+{% extends "Layout/Main.html" %}
+
+{% block body %}
+{% include "Partials/Post-Info.html" %}
+
+{% if LoggedIn == True %}
+<form class="Comment-Form">
+    <div>
+        <textarea name="Comment-Body"></textarea>
+    </div>
+    
+    <div>
+        <button type="submit">Add Comment</button>
+        <button type="button" class="Upvote-Btn">Upvote</button>
+    </div>
+</form>
+{% endif %}
+    
+{% with Comments=Post.Comment %}
+    {% include "Partials/Comments.html" %}
+{% endwith %}
+    
+{% if LoggedIn == True %}
+<script src="/JavaScript/Comment.js"></script>
+<script src="/JavaScript/Upvote.js"></script>
+{% endif %}
+    
+{% endblock %}
