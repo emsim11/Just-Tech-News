@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="EN-US">
+    <head>
+        <title>Just Tech News</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/Stylesheets/Style.css">
+    </head>
+    <body>
+        <div class="Wrapper">
+            <header>
+                <h1>
+                    <a href="/">Just Tech News</a>
+                </h1>
+                <nav>
+                    {% if LoggedIn == True %}
+                    <a href="/dashboard">Dashboard</a>
+                    <button id="logout" class="Btn-No-Style">Logout</button>
+                    {% else %}
+                    <a href="/login">Login</a>
+                    {% endif %}
+                </nav>
+            </header>
+            <main>
+                {% block body %}{% endblock %}
+            </main>
+            <footer>
+                Thanks for visiting!
+            </footer>
+        </div>
+
+        {% if LoggedIn %}
+        <script src="/JavaScript/Logout.js"></script>
+        {% endif %}
+    </body>
+</html>

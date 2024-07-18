@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+Body, HTML {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+
+A {
+    text-decoration: none;
+    color: #225CA3;
+    font-weight: bold;
+    transition: color 0.1s;
+}
+
+A:Hover {
+    color: #3486EB;
+}
+
+Button {
+    background-color: #225CA3;
+    border: 0;
+    padding: 1%;
+    color: #FFF;
+    font-weight: bold;
+    transition: background-color 0.1s;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+Button:Hover {
+    background-color: #3486EB;
+}
+
+Textarea, Input {
+    padding: 0.5%;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+}
+
+Textarea:Focus, Input:Focus {
+    outline: none;
+    border: 1px solid #3486EB;
+}
+
+Textarea {
+    min-width: 40%;
+    min-height: 100px;
+}
+
+Form > Div {
+    margin-bottom: 2%;
+}
+
+Form Label {
+    display: block;
+}
+
+Header {
+    border-bottom: 1px solid #CCC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
+  
+Header H1 {
+    font-size: 1em;
+}
+  
+Main {
+    flex: 1;
+    padding: 2% 4%;
+}
+
+Footer {
+    border-top: 1px solid #CCC;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
+
+.Post-List {
+    margin: 0;
+    padding: 0;
+}
+
+.Wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.Btn-No-Style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225CA3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color 0.1s;
+    margin-left: 16px;
+}
+
+.Btn-No-Style:Hover {
+    background: none;
+    color: #3486EB;
+}
+
+.Delete-Post-Btn {
+    background-color: #D41414;
+}
+
+.Delete-Post-Btn:Hover {
+    background-color: #FF643D;
+}
+
+.Post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+
+.Post .Title Span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7D7D7D;
+}
+
+.Edit-Link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+}
+
+.Upvote-Btn {
+    background-color: #197D0F;
+    transition: background-color .1s;
+}
+
+.Upvote-Btn:Hover {
+    background-color: #1F9C13;
+}
+
+.Comment-Form {
+    margin-bottom: 5%;
+}
+
+.Comment {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.Comment:Nth-Child(Odd) {
+    background-color: #FFF5EB;
+}
+
+.Comment .Meta {
+    font-size: 90%;
+    margin-bottom: 0.5%;
+    opacity: 0.6;
+}
+
+.New-Post-Form Input {
+    width: 300px;
+}
+
+.Edit-Post-Form {
+    margin-bottom: 5%;
+}

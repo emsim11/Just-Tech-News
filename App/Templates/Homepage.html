@@ -1,0 +1,11 @@
+{% extends "Layout/Main.html" %}
+
+{% block body %}
+<ol class="Post-List">
+    {% for Post in Posts %}
+    <li>
+        {% include "Partials/Post-Info.html" %}
+    </li>
+    {% endfor %}
+</ol>
+{% endblock %}

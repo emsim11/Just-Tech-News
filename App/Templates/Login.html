@@ -1,0 +1,37 @@
+{% extends "Layout/Main.html" %}
+
+{% block body %}
+<form class="Login-Form">
+    <div>
+        <label for="Email-Login">Email:</label>
+        <input type="text" id="Email-Login" />
+    </div>
+    <div>
+        <label for="Password-Login">Password:</label>
+        <input type="password" id="Password-Login" />
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>
+
+<form class="Signup-Form">
+    <div>
+        <label for="Username-Signup">Username:</label>
+        <input type="text" id="Username-Signup" />
+    </div>
+    <div>
+        <label for="Email-Signup">Email:</label>
+        <input type="text" id="Email-Signup" />
+    </div>
+    <div>
+        <label for="Password-Signup">Password:</label>
+        <input type="password" id="Password-Signup" />
+    </div>
+    <div>
+        <button type="submit">Signup</button>
+    </div>
+</form>
+
+<script src="/JavaScript/Login.js"></script>
+{% endblock %}

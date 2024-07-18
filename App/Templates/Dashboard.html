@@ -1,0 +1,34 @@
+{% extends "Layout/Main.html" %}
+
+{% block body %}
+<section>
+    <h2>Create New Post</h2>
+    <form class="New-Post-Form">
+        <div>
+            <label for="Post-Title">Title</label>
+            <input type="text" id="Post-Title" name="Post-Title" />
+        </div>
+        <div>
+            <label for="Post-URL">Link</label>
+            <input id="Post-URL" name="Post-URL" />
+        </div>
+        <button type="submit" class="Btn">Create</button>
+    </form>
+</section>
+
+{% if Posts|length > 0 %}
+<section>
+    <h2>Your Posts</h2>
+    <ol>
+        {% for Post in Posts %}
+        <li>
+            {% include "Partials/Post-Info.html" %}
+            <a href="/dashboard/edit/{{Post.Id}}" class="Edit-Link">Edit Post</a>
+        </li>
+        {% endfor %}
+    </ol>
+</section>
+{% endif %}
+
+<script src="/JavaScript/Add-Post.js"></script>
+{% endblock %}
