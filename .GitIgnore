@@ -1,0 +1,21 @@
+# Distribution & Packaging
+Build/
+Dist/
+Node_Modules/
+Package.json
+*.egg-info
+
+# Environments
+.VEnv/
+.Env
+.DS_STORE
+
+# Flask
+Instance/
+
+# Unit Testing & Coverage Reports
+HTMLCov/
+.PyTest_Cache/
+__PyCache__/
+*.pyc
+.coverage
