@@ -9,7 +9,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/emilysimone/Library/Mobile Documents/com~apple~CloudDocs/Files/Developer/Python/Just-Tech-News/VEnv"
+setenv VIRTUAL_ENV "/Users/emilysimone/Library/Mobile Documents/com~apple~CloudDocs/Files/Archive/Coding/Python/Just-Tech-News/VEnv"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"

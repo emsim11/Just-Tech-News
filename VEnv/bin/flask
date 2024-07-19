@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/emilysimone/Library/Mobile Documents/com~apple~CloudDocs/Files/Developer/Python/Just-Tech-News/VEnv/bin/python3" "$0" "$@"
+'''exec' "/Users/emilysimone/Library/Mobile Documents/com~apple~CloudDocs/Files/Archive/Coding/Python/Just-Tech-News/VEnv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
