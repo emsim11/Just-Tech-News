@@ -60,7 +60,13 @@ The Just Tech News application uses the following tools and technologies:
 
 * **SQLAlchemy** Python library is used to connect to a relational database and define the MySQL database models.
 
+* **PyMySQL**
+
 * **Bcrypt** library is used to further protect the data and application by providing password encryption.
+
+* **Cryptography**
+
+* **Python DotEnv**
 
 * **Python's `assert`, `try`, `accept` Statements** are used to handle errors.
 
