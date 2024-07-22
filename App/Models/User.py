@@ -33,5 +33,13 @@ class User(Base):
   	# If Password Is Valid, Return Value & Continue
     return Password
   
+  # Decrypt Password & Verify It
+  def Verify_Password(Self, Password):
+    # `checkpw()` Method Compares Incoming Password To The One Saved On `User` Object (`Self.Password`)
+    return bcrypt.checkpw(
+			Password.encode('utf-8'),
+   		Self.Password.encode('utf-8')
+		)
+  
 # NOTES:
 # `assert` Statements Will Throw An Error If Condition Is False & Prevent Moving To Next Command

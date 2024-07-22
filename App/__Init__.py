@@ -1,5 +1,5 @@
 from flask import Flask # Import `Flask()` function
-from App.Routes import Home, Dashboard # Import Routes
+from App.Routes import Home, Dashboard, API # Import Routes
 from App.Database import Init_Database # Import Database Connection
 from App.Utilities import Filters # Register Custom Filter Functions With Jinja Template Environment
 
@@ -25,6 +25,7 @@ def create_app(test_config=None):
   # Register Routes
   App.register_blueprint(Home) # Home Routes
   App.register_blueprint(Dashboard) # Dashboard Routes
+  App.register_blueprint(API) # Application API Routes
   
   # Register Custom Filter Functions
   App.jinja_env.filters['Format_URL'] = Filters.Format_URL
