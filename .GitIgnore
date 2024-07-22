@@ -6,7 +6,7 @@ Package.json
 *.egg-info
 
 # Environments
-.VEnv/
+VEnv/
 .Env
 .DS_STORE
 
