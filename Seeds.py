@@ -1,6 +1,6 @@
-# SEED DATABASE SCRIPT: `python3 Seeds.py`
+# Seed Database With Command: `python3 Seeds.py`
 
-# Import Database And Models
+# Import Database And Tables
 from App.Models import User, Post, Comment, Vote
 from App.Database import Session, Base, Engine
 
@@ -8,7 +8,7 @@ from App.Database import Session, Base, Engine
 Base.metadata.drop_all(Engine)
 Base.metadata.create_all(Engine)
 
-# Establish Temporary Session Connection
+# Establish Temporary Session Connection With `Session` Class
 Database = Session()
 
 # Insert Users
@@ -20,9 +20,6 @@ Database.add_all([
   User(Username='juliaroberts4', Email='juliaroberts4@yahoo.com', Password='Password123456')
 ])
 
-# Seed Users
-Database.commit()
-
 # Insert Posts
 Database.add_all([
   Post(Title='Donec Posuere Metus Vitae Ipsum', Post_URL='https://buzzfeed.com/in/imperdiet/et/commodo/vulputate.png', User_Id=1),
@@ -31,9 +28,6 @@ Database.add_all([
   Post(Title='Nunc Purus', Post_URL='http://desdev.cn/enim/blandit/mi.jpg', User_Id=3),
   Post(Title='Pellentesque Eget Nunc', Post_URL='http://google.ca/nam/nulla/integer.aspx', User_Id=4)     
 ])
-
-# Seed Posts
-Database.commit()
 
 # Insert Comments
 Database.add_all([ 
@@ -44,20 +38,18 @@ Database.add_all([
   Comment(Comment_Text='In hac habitasse platea dictumst.', User_Id=3, Post_Id=3)
 ])
 
-# Seed Comments
-Database.commit()
-
 # Insert Votes
 Database.add_all([
+    Vote(User_Id=3, Post_Id=1),
     Vote(User_Id=1, Post_Id=2),
+    Vote(User_Id=4, Post_Id=2),
     Vote(User_Id=1, Post_Id=4),
     Vote(User_Id=2, Post_Id=4),
     Vote(User_Id=3, Post_Id=4),
-    Vote(User_Id=4, Post_Id=2),
 ])
 
-# Seed Votes
+# Run `INSERT` Statements
 Database.commit()
 
-# Close The Session Connection
+# Close Session Connection Once Finished Making Database Transactions
 Database.close()

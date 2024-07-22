@@ -2,6 +2,6 @@
 from .Home import Blueprints as Home
 from .Dashboard import Blueprints as Dashboard
 
-# IMPORTANT: 
+# NOTES: 
 # Without This App File, Import In `App/__Init__.py`
-# Is `App.Routes.Home import Blueprints as Home`
+# Would Be `App.Routes.Home import Blueprints as Home`

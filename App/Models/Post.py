@@ -12,8 +12,8 @@ class Post(Base):
   Title = Column(String(100), nullable=False)
   Post_URL = Column(String(100), nullable=False)
   User_Id = Column(Integer, ForeignKey('Users.Id')) # `ForeignKey` References `Users` Table
-  Created_At = Column(DateTime, default=datetime.now) # Uses Python's Built-In `datetime` Module To Generate Timestamps
-  Updated_At = Column(DateTime, default=datetime.now, onupdate=datetime.now) # Uses Python's Built-In `datetime` Module To Generate Timestamps
+  Created_At = Column(DateTime, default=datetime.now) # Use Python's Built-In `datetime` Module To Generate Timestamps
+  Updated_At = Column(DateTime, default=datetime.now, onupdate=datetime.now) # Use Python's Built-In `datetime` Module To Generate Timestamps
   User = relationship('User') # Dynamic Property Queries A User (Not Apart Of The `Post` Table)
   Comment = relationship('Comment', cascade='all,delete') # Dynamic Property Queries A Comment & Its User (Not Apart Of The `Post` Table)
   Votes = relationship('Vote', cascade='all,delete') # Dynamic Property Queries Information About Number Of Votes A Post Has (Not Apart Of The `Post` Table)
