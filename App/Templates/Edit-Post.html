@@ -7,12 +7,16 @@
     <form class="Edit-Post-Form">
         <div>
             <input name="Post-Title" type="text" value="{{Post.Title}}" />
-            <span>({{Post.Post_URL}})</span>
+            <!-- Update `Post.Post_URL` To Only Show Domain Name ☑️ -->
+            <span>({{Post.Post_URL|Format_URL}})</span>
         </div>
         <div>
-            {{Post.Vote_Count}} Point(s) By You On {{Post.Created_At}}
+            <!-- Update `Post.Vote_Count` To Pluralize `Point` ☑️ -->
+            <!-- Update `Post.Created_At` To Format Date ☑️ -->
+            {{Post.Vote_Count}} {{Post.Vote_Count|Format_Plural('Point')}} By You On {{Post.Created_At|Format_Date}}
             |
-            <a href="/post/{{Post.Id}}">{{Post.Comments|length}} Comment(s)</a>
+            <!-- Update `Post.Comment|Length` To Pluralize `Comment` ☑️ -->
+            <a href="/post/{{Post.Id}}">{{Post.Comment|length}} {{Post.Comment|length|Format_Plural('Comment')}}</a>
         </div>
         <button type="submit">Save Post</button>
         <button type="button" class="Delete-Post-Btn">Delete Post</button>

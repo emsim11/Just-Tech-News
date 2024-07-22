@@ -1,11 +1,15 @@
 <article class="Post">
     <div class="Title">
         <a href="{{Post.Post_URL}}" target="_blank">{{Post.Title}}</a>
-        <span>({{Post.Post_URL}})</span>
+        <!-- Update `Post.Post_URL` To Only Show Domain Name ☑️ -->
+        <span>({{Post.Post_URL|Format_URL}})</span>
     </div>
     <div class="Meta">
-        {{Post.Vote_Count}} Point(s) By {{Post.User.Username}} on {{Post.Created_At}}
+        <!-- Update `Post.Vote_Count` To Pluralize `Point` ☑️ -->
+        <!-- Update `Post.Created_At` To Format Date ☑️ -->
+        {{Post.Vote_Count}} {{Post.Vote_Count|Format_Plural('Point')}} By {{Post.User.Username}} on {{Post.Created_At|Format_Date}}
         |
-        <a href="/post/{{Post.Id}}">{{Post.Comment|length}} Comment(s)</a>
+        <!-- Update `Post.Comment|length` To Pluralize `Comment` ☑️ -->
+        <a href="/post/{{Post.Id}}">{{Post.Comment|length}} {{Post.Comment|length|Format_Plural('Comment')}}</a>
     </div>
 </article>

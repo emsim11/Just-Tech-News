@@ -1,8 +1,7 @@
-# Import `Flask()` function
-from flask import Flask
-
-# Import Routes
-from App.Routes import Home, Dashboard
+from flask import Flask # Import `Flask()` function
+from App.Routes import Home, Dashboard # Import Routes
+from App.Database import Init_Database # Import Database Connection
+from App.Utilities import Filters # Register Custom Filter Functions With Jinja Template Environment
 
 # Use `def` Keyword To Define `create_app()` Function
 def create_app(test_config=None):
@@ -26,6 +25,14 @@ def create_app(test_config=None):
   # Register Routes
   App.register_blueprint(Home) # Home Routes
   App.register_blueprint(Dashboard) # Dashboard Routes
+  
+  # Register Custom Filter Functions
+  App.jinja_env.filters['Format_URL'] = Filters.Format_URL
+  App.jinja_env.filters['Format_Date'] = Filters.Format_Date
+  App.jinja_env.filters['Format_Plural'] = Filters.Format_Plural
+
+  # Initiate Database Once Flask App Is Ready
+  Init_Database(App)
   
   # `return` Is The Route's Response
   return App
